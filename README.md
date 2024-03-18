@@ -296,7 +296,7 @@ print(f"Los ángulos internos son {rect_triangle.compute_inner_angles()}")
 ```
 
 
-## 2.Escenario Restaurante 2.0
+# 2.Escenario Restaurante 2.0
 ```python
 
 class Order():
