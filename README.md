@@ -276,3 +276,8 @@ print(f"El perímetro del triángulo rectángulo es {Rect_triangle.compute_perim
 print(f"Los ángulos internos son {Rect_triangle.compute_inner_angles()}")
 
 ```
+###Explicación:
+
+
+##2. Escenario Restaurante 2.0
+
