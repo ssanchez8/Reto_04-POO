@@ -1,6 +1,6 @@
 # Reto_04-POO
 
-#1. Ejercicio de Clase (Figuras)
+# 1. Ejercicio de Clase (Figuras)
 
 ```mermaid
 classDiagram
@@ -276,8 +276,8 @@ print(f"El perímetro del triángulo rectángulo es {Rect_triangle.compute_perim
 print(f"Los ángulos internos son {Rect_triangle.compute_inner_angles()}")
 
 ```
-###Explicación:
+### Explicación:
 
 
-##2. Escenario Restaurante 2.0
+## 2.Escenario Restaurante 2.0
 
