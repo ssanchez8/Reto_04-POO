@@ -186,7 +186,7 @@ class Triangle(Shape):
     def compute_perimeter(self):
         pass
 ```
-La clase Triangle hereda de shape, y para esta se definió un método general para el cálculo de áreas que dependan de la altura netamente y sea complicado determinarla solo conociendo los vértices del mismo y por ende los lados. El método aplicado fue usando la fórmula de Herón, que se basa en el semiperímetro de un triángulo (suma de lados/2) y en los propios lados de la figura. Merece la pena que este método se puede aplicar a cualquier triángulo que se desee. Para el isóceles y escaleno viene de maravilla, para el rectángulo se usó para no depender de la orientación del mismo, mientras que para el triángulo equilatero se usó una fórmula producto de una deducción matemática de la altura de cualquier triángulo con lados y ángulos iguales. 
+La clase Triangle hereda de shape, y para esta se definió un método general para el cálculo de áreas que dependan de la altura netamente y sea complicado determinarla solo conociendo los vértices del mismo y por ende los lados. El método aplicado fue usando la fórmula de Herón, que se basa en el semiperímetro de un triángulo (suma de lados/2) y en los propios lados de la figura. Merece la pena aclarar que este método se puede aplicar a cualquier triángulo que se desee. Para el isóceles y escaleno viene de maravilla, para el rectángulo se usó para no depender de la orientación del mismo, mientras que para el triángulo equilatero se usó una fórmula producto de una deducción matemática de la altura de cualquier triángulo con lados y ángulos iguales. 
 ```python
 
 class EquilateralTriangle(Triangle):
