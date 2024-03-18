@@ -208,10 +208,10 @@ print(f"El perímetro del triángulo escaleno es {sca_triangle.compute_perimeter
 print(f"Los ángulos internos son {sca_triangle.compute_inner_angles()}" "\n")
 
 ## Rectangle Triangle
-Rect_triangle = RectangleTriangle ([Point(6,3), Point(12,3), Point(6,8)])
+rect_triangle = RectangleTriangle ([Point(6,3), Point(12,3), Point(6,8)])
 print("Triángulo Rectángulo")
-print(f"El área del triángulo rectángulo es {Rect_triangle.compute_area()}")
-print(f"El perímetro del triángulo rectángulo es {Rect_triangle.compute_perimeter()}")
-print(f"Los ángulos internos son {Rect_triangle.compute_inner_angles()}")
+print(f"El área del triángulo rectángulo es {rect_triangle.compute_area()}")
+print(f"El perímetro del triángulo rectángulo es {rect_triangle.compute_perimeter()}")
+print(f"Los ángulos internos son {rect_triangle.compute_inner_angles()}")
 
 
