@@ -287,14 +287,13 @@ print(f"El perímetro del triángulo escaleno es {sca_triangle.compute_perimeter
 print(f"Los ángulos internos son {sca_triangle.compute_inner_angles()}" "\n")
 
 ## Rectangle Triangle
-Rect_triangle = RectangleTriangle ([Point(6,3), Point(12,3), Point(6,8)])
+rect_triangle = RectangleTriangle ([Point(6,3), Point(12,3), Point(6,8)])
 print("Triángulo Rectángulo")
-print(f"El área del triángulo rectángulo es {Rect_triangle.compute_area()}")
-print(f"El perímetro del triángulo rectángulo es {Rect_triangle.compute_perimeter()}")
-print(f"Los ángulos internos son {Rect_triangle.compute_inner_angles()}")
+print(f"El área del triángulo rectángulo es {rect_triangle.compute_area()}")
+print(f"El perímetro del triángulo rectángulo es {rect_triangle.compute_perimeter()}")
+print(f"Los ángulos internos son {rect_triangle.compute_inner_angles()}")
 
 ```
-### Explicación:
 
 
 ## 2.Escenario Restaurante 2.0
@@ -350,6 +349,15 @@ class Order():
         self._total -= discount
         print(f"Total a pagar: {self._total}, con un descuento aplicado de {discount} pesos por {items_for_discount}")
 
+```
+En primer lugar, se modificó la clase Order, donde además de añadir atributos privados, setters y getters, se definieron dos nuevos métodos, uno para verificar si una orden contenía platos principales, y otro para verificar si tenía bebidas. Posteriormente se modificó el método para calcular la cuenta de la orden, incluyendo precios, cantidad y descuentos. Merece la pena restaltar que los descuentos se organizaron de la siguiente manera:
+
+* Descuento del 10% en caso de llevar alguna orden con plato principal y con un precio entre 25000 y 50000 pesos
+* Descuento del 5% en caso de llevar un plato principal y una bebida
+* Descuento del 20% en caso de llevar más de 50000 pesos en compras
+
+
+```python
 
 class MenuItem():
     def __init__(self, price, name, quantity) -> None:
@@ -419,7 +427,9 @@ class Cash(PaymentMeans):
         
         else:
             print(f"El monto pagado no es suficiente, faltan {amount - self._amount_payed} pesos")
-
+```
+En este punto, se crearon 3 nuevas clases referentes a los métodos de pago de la orden (1 siendo la clase padre y las otras 2 las hijas). La primera subclase se usó para describir el pago por tarjeta, donde se indicaron como atributos de instancia el número y el código cvv de la tarjeta; además de un método para pagar con tarjeta. La segunda subclase se usó para describir el pago por efectivo, solicitando un monto de dinero como atributo de instancia, y realizando los respectivos cálculos para verificar si el usuario pagó adecuadamente (y devolver cambio en caso de ser necesario) o si entregó menos dinero del costo de la orden. 
+```python 
 order = Order()
 
 selection = input("¿Desea ordenar un plato principal? (s/n): ")
@@ -509,3 +519,4 @@ while True:
 
 
 ```
+Finalmente se utilizó la misma interfaz del escenario creado en el reto 3, y se le agregó una forma de solicitarle al cliente la forma de pago, y realizar la cancelación del costo de la orden. Se utilizó una tarjeta ya instanciada para usar el método de la clase Card. 
